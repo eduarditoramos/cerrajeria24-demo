@@ -1,8 +1,12 @@
 # Evidencia de pruebas — Cerrajería 24
 
+## Estado de despliegue
+
+Las verificaciones descritas corresponden al sitio servido para desarrollo. El despliegue en Vercel y la comprobación de su URL HTTPS pública siguen pendientes de autenticación; no se declara terminado ese entregable.
+
 ## Resultado
 
-**118/118 verificaciones interactivas aprobadas** en el navegador para 1440 × 1000, 768 × 1024, 390 × 844 y 375 × 812 px.
+**121/121 verificaciones interactivas aprobadas** en el navegador para 1440 × 1000, 768 × 1024, 390 × 844 y 375 × 812 px.
 
 En cada tamaño se verificaron el ancho de contenido sin desbordamiento horizontal, el header, 24 marcas SVG, metadatos noindex/nofollow, ausencia de destinos `tel:`, `mailto:` o `wa.me` ficticios, funcionamiento de los cuatro acordeones y el filtro de cobertura. Se probaron búsqueda de alcaldías sin acentos, estado sin resultados, reinicio a las 16 alcaldías y selección que mantiene la cobertura explícitamente pendiente de confirmar. También se abrió y cerró el diálogo de demostración desde todos los CTAs y se comprobó el contexto por alcaldía. En 768, 390 y 375 px se probaron apertura/cierre del menú móvil, navegación por ancla, Escape, barra inferior fija y objetivos táctiles de al menos 44 px. No se detectaron errores JavaScript durante la secuencia de interacción.
 

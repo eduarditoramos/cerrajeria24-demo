@@ -25,8 +25,9 @@
       const toggle = get('#menu-toggle');
       if (width <= 1040) {
         assert(win.getComputedStyle(toggle).display !== 'none', width + ': botón menú visible');
+        assert(toggle.getAttribute('aria-label') === 'Abrir menú', width + ': etiqueta menú accesible');
         toggle.click();
-        assert(!get('#mobile-nav').hidden && toggle.getAttribute('aria-expanded') === 'true', width + ': menú abre');
+        assert(!get('#mobile-nav').hidden && toggle.getAttribute('aria-expanded') === 'true' && toggle.getAttribute('aria-label') === 'Cerrar menú', width + ': menú abre');
         get('#mobile-nav a').click();
         assert(get('#mobile-nav').hidden && toggle.getAttribute('aria-expanded') === 'false', width + ': ancla cierra menú');
         toggle.click();
