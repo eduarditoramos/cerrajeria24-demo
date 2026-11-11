@@ -1,0 +1,15 @@
+{
+  "name": "cerrajeria24-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Propuesta conceptual Industrial Premium de HazloSimple para Marco.",
+  "packageManager": "pnpm@10.11.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/app.js && node --check src/site-config.js && node scripts/check.mjs",
+    "preview": "node scripts/serve.mjs dist"
+  }
+}

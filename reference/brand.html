@@ -1,0 +1,58 @@
+<!doctype html><html lang="es-MX"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cerrajería 24 · Brand board (provisional)</title>
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Manrope;src:url(assets/fonts/Manrope-400.ttf);font-weight:400}
+@font-face{font-family:Manrope;src:url(assets/fonts/Manrope-600.ttf);font-weight:600}
+@font-face{font-family:Manrope;src:url(assets/fonts/Manrope-800.ttf);font-weight:800}
+:root{--navy:#142338;--yellow:#F6C453;--gray:#F3F5F7;--line:#DDE2E8;--ink2:#4A5668}
+*{box-sizing:border-box}body{margin:0;background:var(--gray);font-family:Manrope,Inter,system-ui,sans-serif;color:var(--navy);padding:clamp(16px,3vw,40px)}
+.board{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.c{border-radius:6px;padding:28px;position:relative;overflow:hidden}
+.lab{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin:0 0 18px;display:flex;gap:10px;align-items:center}
+.lab::before{content:"";width:18px;height:3px;background:var(--yellow)}
+.hero{grid-column:span 12;background:var(--navy);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:48px}
+.hero h1{margin:0;font-size:clamp(28px,4vw,48px);letter-spacing:-.03em;line-height:1}
+.hero p{color:#C9D3E0;margin:12px 0 0;max-width:34em}
+.warn{background:var(--yellow);color:var(--navy);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:4px}
+.w{background:#fff;border:1px solid var(--line)}
+.d{background:var(--navy);color:#fff}
+.y{background:var(--yellow)}
+.s12{grid-column:span 12}.s8{grid-column:span 8}.s6{grid-column:span 6}.s4{grid-column:span 4}.s3{grid-column:span 3}
+.center{display:grid;place-items:center;min-height:200px}
+.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+.sw div{padding:70px 16px 16px;font-size:13px;font-weight:600;line-height:1.4}
+.sw b{display:block;font-size:15px;font-weight:800}
+.t1{font-size:72px;font-weight:800;letter-spacing:-.035em;line-height:1;margin:0}
+.t2{font-size:28px;font-weight:800;letter-spacing:-.02em;margin:18px 0 6px}
+.t3{font-size:17px;line-height:1.6;color:var(--ink2);max-width:34em}
+.wgt{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:22px}
+.apps{display:flex;gap:28px;align-items:flex-end;flex-wrap:wrap}
+.phone{width:84px;height:84px;border-radius:19px}
+.small{display:flex;gap:18px;align-items:center}
+.clear{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+ul{margin:0;padding-left:18px;line-height:1.8;font-size:15px}
+@media(max-width:900px){.s8,.s6,.s4,.s3{grid-column:span 12}.sw{grid-template-columns:1fr 1fr}.t1{font-size:52px}}
+</style></head><body>
+<div class="board">
+ <div class="c hero"><div><p class="lab" style="color:#fff">Brand board · v0.1</p><h1>CERRAJERÍA 24</h1><p>Identidad visual “Industrial Premium”. Seguridad, profesionalismo, rapidez, confianza, disponibilidad 24 horas.</p></div><span class="warn">Nombre provisional · por definir con Marco</span></div>
+
+ <div class="c w s8 center" style="min-height:260px"><div><p class="lab">Logotipo · fondo claro</p><img src="assets/logo/cerrajeria24-horizontal.svg" width="420" alt="Logotipo Cerrajería 24"></div></div>
+ <div class="c d s4 center"><div><p class="lab">Fondo oscuro</p><img src="assets/logo/cerrajeria24-horizontal-oscuro.svg" width="280" alt=""></div></div>
+
+ <div class="c w s6"><p class="lab">Marca · versiones</p>
+  <div class="apps"><div><img class="phone" src="assets/logo/cerrajeria24-marca.svg" alt=""><small style="display:block;margin-top:8px;font-size:12px">Principal</small></div>
+  <div><img class="phone" src="assets/logo/cerrajeria24-marca-inversa.svg" alt=""><small style="display:block;margin-top:8px;font-size:12px">Inversa</small></div>
+  <div><div class="small"><img src="assets/logo/favicon.svg" width="16" alt=""><img src="assets/logo/favicon.svg" width="32" alt=""><img src="assets/logo/favicon.svg" width="48" alt=""></div><small style="display:block;margin-top:8px;font-size:12px">Favicon 16 · 32 · 48 px</small></div></div></div>
+ <div class="c d s6"><p class="lab">App móvil / ícono de acceso directo</p>
+  <div class="apps"><div style="background:#0E1A2B;padding:16px;border-radius:26px"><img class="phone" style="width:96px;height:96px;border-radius:22px" src="assets/logo/cerrajeria24-marca.svg" alt=""></div><div style="background:#F3F5F7;padding:16px;border-radius:26px"><img class="phone" style="width:96px;height:96px;border-radius:22px" src="assets/logo/cerrajeria24-marca.svg" alt=""></div><p style="max-width:16em;color:#C9D3E0;font-size:14px;margin:0">Funciona sobre fondos claros y oscuros sin cambiar de versión.</p></div></div>
+
+ <div class="c w s12"><p class="lab">Paleta cromática</p>
+  <div class="sw"><div style="background:#142338;color:#fff"><b>Azul noche</b>#142338<br>Base, texto, fondos</div><div style="background:#F6C453"><b>Amarillo seguridad</b>#F6C453<br>Acción y alerta. Único acento</div><div style="background:#fff;border-right:1px solid #DDE2E8"><b>Blanco</b>#FFFFFF<br>Superficies</div><div style="background:#F3F5F7"><b>Gris claro</b>#F3F5F7<br>Secciones de apoyo</div></div>
+  <p class="t3" style="margin-top:16px;font-size:14px">Contraste: amarillo sobre azul noche ≈ 9:1 · azul noche sobre amarillo ≈ 9:1 · azul noche sobre blanco ≈ 15:1. El amarillo nunca se usa como texto sobre blanco.</p></div>
+
+ <div class="c w s8"><p class="lab">Tipografía · Manrope</p><p class="t1">Aa 24 h</p><p class="t2">Titulares en ExtraBold, tracking ajustado</p><p class="t3">Texto de lectura en Regular, 17 px sobre 1.55. Manrope tiene geometría firme y números claros, adecuados para teléfonos y horarios.</p>
+  <div class="wgt"><span style="font-weight:400">Regular 400</span><span style="font-weight:600">SemiBold 600</span><span style="font-weight:800">ExtraBold 800</span></div></div>
+ <div class="c y s4"><p class="lab" style="opacity:1">Lógica de la marca</p><ul><li><b>Llavín</b>: cerrajería.</li><li><b>Anillo con marcador</b>: dial de 24 horas, siempre disponible.</li><li><b>Escudo geométrico</b>: contenedor firme y legible a 16 px.</li><li><b>Chip “24”</b>: dato clave, siempre visible.</li></ul></div>
+
+ <div class="c w s12"><p class="lab">Reglas de uso</p><div class="clear"><ul><li>Espacio libre mínimo: la altura de la marca ÷ 4.</li><li>Tamaño mínimo del logotipo horizontal: 120 px de ancho.</li><li>Sobre fondos oscuros, usar la marca inversa.</li></ul><ul><li>No añadir sombras, degradados ni candados decorativos.</li><li>Amarillo solo para acciones, datos críticos y detalles.</li><li>El nombre “Cerrajería 24” es provisional y puede cambiar.</li></ul></div></div>
+</div></body></html>

@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import { readFile, access } from 'node:fs/promises';
+import { CONTACTS } from '../src/site-config.js';
+
+const html = await readFile('index.html', 'utf8');
+const css = await readFile('src/enhancements.css', 'utf8');
+assert.match(html, /lang="es-MX"/);
+assert.match(html, /content="noindex, nofollow"/);
+assert.match(html, /Una experiencia digital creada por HazloSimple\./);
+assert.equal((html.match(/<h1>/g) || []).length, 1);
+assert.equal((html.match(/data-service-toggle/g) || []).length, 4);
+assert.equal((html.match(/<li data-district=/g) || []).length, 16);
+assert.match(html, /id="mobile-nav"[^>]*hidden/);
+assert.match(html, /<dialog[^>]+id="demo-dialog"/);
+assert.match(css, /prefers-reduced-motion/);
+assert.equal(CONTACTS.phone, null, 'Demo debe mantener el teléfono sin configurar');
+assert.equal(CONTACTS.whatsapp, null, 'Demo debe mantener WhatsApp sin configurar');
+assert.equal(CONTACTS.email, null, 'Demo debe mantener el correo sin configurar');
+assert.doesNotMatch(html, /href="(?:tel:|mailto:|https:\/\/wa\.me)/);
+assert.doesNotMatch(html, /55 XXXX|contacto@dominio|>ABIERTO</);
+const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+assert.equal(ids.length, new Set(ids).size, 'IDs deben ser únicos');
+for (const [, id] of html.matchAll(/aria-controls="([^"]+)"/g)) assert(ids.includes(id));
+for (const [, id] of html.matchAll(/href="#([^"]+)"/g)) assert(ids.includes(id));
+for (const path of ['public/assets/logo/favicon.svg', 'public/assets/fonts/Manrope-400.ttf', 'public/assets/fonts/Manrope-800.ttf', 'public/robots.txt', 'src/app.js']) await access(path);
+assert.equal((await readFile('public/robots.txt', 'utf8')).trim(), 'User-agent: *\nDisallow: /');
+assert.equal(JSON.parse(await readFile('public/manus-routes.json', 'utf8')).routes.length, 1);
+console.log('PASS: contenido, 16 alcaldías provisionales, 4 acordeones, navegación, contactos seguros, metadatos, assets y movimiento reducido.');
